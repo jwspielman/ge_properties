@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'paperclip'
+gem 'figaro'
 gem 'font-awesome-sass'
 
 # Use ActiveModel has_secure_password

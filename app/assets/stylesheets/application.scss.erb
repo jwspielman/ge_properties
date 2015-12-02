@@ -16,7 +16,6 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome-sprockets";
 @import "font-awesome";
 
 // #body {
@@ -24,6 +23,17 @@
 //     background-size: cover; 
 // }
 
+body {
+    background: url(<%= asset_path "park.jpg" %>) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    align-content: center;
+    margin-top: 100px;
+    color: white;
+    background-color:rgba(231, 127, 31, 0.2);
+}
 
 @media(min-width:768px) {
     .navbar-fixed-top {
