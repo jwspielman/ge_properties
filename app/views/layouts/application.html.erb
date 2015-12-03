@@ -4,6 +4,9 @@
   <title>G&E Properties</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_api_key'] %>">
+</script>
   <%= csrf_meta_tags %>
 </head>
 
@@ -19,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <%= link_to "G & E Properties Inc", root_path, class:"navbar-brand" %>
+                <%= link_to "G & E Properties, Inc.", root_path, class:"navbar-brand sanchez" %>
             </div>
     
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,9 +45,24 @@
         
     </nav>
 
-<div class="container">
+<div class="container main-container">
 <%= yield %>
 </div>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="text-muted center-it">
+            <p><strong>G&E Properties Inc.</strong></p>
+            <p> 404-231-1568</p>
+        </div>
+      </div>
+    </footer>
+
+<!-- <div class="container">
+    <footer class=:"footer">
+        <p> G&E Properties Inc.</p>
+    </footer>
+ -->
+</div>
 </body>
 </html>

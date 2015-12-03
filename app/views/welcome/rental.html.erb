@@ -1,2 +1,16 @@
-<h1>Welcome#rental</h1>
-<p>Find me in app/views/welcome/rental.html.erb</p>
+<div class="dosis">
+<h1>See Which Apartment is Waiting for You!</h1>
+</div>
+<p>All rental properties are just feet away from beautiful Piedmont Park!</p>
+
+<div class="row">
+	<% @properties.each do |rental| %>
+		<div class="col-md-6 center-it">
+			<div class="well center-it">
+				<p><%= image_tag rental.avatar.url(:medium) %></p>
+				<h3><%= link_to rental.address, rental %></h3>
+				<p><%= rental.units %></p>
+			</div>
+		</div>
+	<% end %>
+</div>

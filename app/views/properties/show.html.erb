@@ -1,24 +1,72 @@
-<p id="notice"><%= notice %></p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    	<%= image_tag '231_entrance.jpg', alt: "entrace", class: "carousel-pics" %>
+      <!-- <img src="231_entrance.jpg" alt="entrance"> -->
+      <div class="carousel-caption">
+       Entrance to 231 12th Street
+      </div>
+    </div>
+    <div class="item">
+    	<%= image_tag '231_kitchen.jpg', alt: "kitchen", class: "carousel-pics" %>
+      <!-- <img src="..." alt="..."> -->
+      <div class="carousel-caption">
+        Stainless Steel Appliances and Granite Countertops
+      </div>
+    </div>
+    	<div class="item">
+    	<%= image_tag '231_bathroom.jpg', alt: "kitchen", class: "carousel-pics" %>
+      <!-- <img src="..." alt="..."> -->
+      <div class="carousel-caption">
+        Beautiful Vanity and Walk-In Shower
+      </div>
+    </div>
+    ...
+  </div>
+
+<!--   Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<strong>
+<h2>
+ <strong><%= @property.address %></strong>
+</h2>
 
 <p>
   <strong>Units:</strong>
   <%= @property.units %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+  <%= number_to_currency @property.price %>
+</p> -->
 
 <p>
-  <strong>Description:</strong>
   <%= @property.description %>
 </p>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<div id="map-canvas"><div/>
+
+</strong>
+<%= link_to 'Back',  our_properties_path, class: "btn btn-info" %><br />
+
+<p>
+
+</p>
