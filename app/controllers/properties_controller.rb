@@ -1,10 +1,15 @@
 class PropertiesController < ApplicationController
+  # geocoded_by :address
+  # after_validation :geocode
+
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
   # GET /properties
   # GET /properties.json
   def index
     @properties = Property.all
+
+    
   end
 
   # GET /properties/1
@@ -69,6 +74,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:address, :units, :price, :description, :avatar)
+      params.require(:property).permit(:address, :latitude, :longitude, :units, :price, :description, :avatar, :entrance, :kitchen, :bathroom)
     end
 end

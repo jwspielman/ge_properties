@@ -11,19 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202001515) do
+ActiveRecord::Schema.define(version: 20151203164400) do
 
   create_table "properties", force: :cascade do |t|
     t.string   "address"
     t.string   "units"
     t.decimal  "price"
     t.text     "description"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "entrance_file_name"
+    t.string   "entrance_content_type"
+    t.integer  "entrance_file_size"
+    t.datetime "entrance_updated_at"
+    t.string   "kitchen_file_name"
+    t.string   "kitchen_content_type"
+    t.integer  "kitchen_file_size"
+    t.datetime "kitchen_updated_at"
+    t.string   "bathroom_file_name"
+    t.string   "bathroom_content_type"
+    t.integer  "bathroom_file_size"
+    t.datetime "bathroom_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end

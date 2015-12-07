@@ -9,21 +9,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-    	<%= image_tag '231_entrance.jpg', alt: "entrace", class: "carousel-pics" %>
+    	<%= image_tag @property.entrance, alt: "entrace", class: "carousel-pics" %>
       <!-- <img src="231_entrance.jpg" alt="entrance"> -->
       <div class="carousel-caption">
        Entrance to 231 12th Street
       </div>
     </div>
-    <div class="item">
-    	<%= image_tag '231_kitchen.jpg', alt: "kitchen", class: "carousel-pics" %>
+  <div class="item">
+    	<%= image_tag @property.kitchen, alt: "kitchen", class: "carousel-pics" %>
       <!-- <img src="..." alt="..."> -->
       <div class="carousel-caption">
         Stainless Steel Appliances and Granite Countertops
       </div>
     </div>
     	<div class="item">
-    	<%= image_tag '231_bathroom.jpg', alt: "kitchen", class: "carousel-pics" %>
+    	<%= image_tag @property.bathroom, alt: "kitchen", class: "carousel-pics" %>
       <!-- <img src="..." alt="..."> -->
       <div class="carousel-caption">
         Beautiful Vanity and Walk-In Shower
@@ -60,13 +60,17 @@
 
 <p>
   <%= @property.description %>
-</p>
+</p><br />
 
-<div id="map-canvas"><div/>
+<div id="map-canvas"></div><br />
 
 </strong>
 <%= link_to 'Back',  our_properties_path, class: "btn btn-info" %><br />
 
-<p>
 
-</p>
+<%= javascript_tag do %>
+  longitude = '<%= j @property.longitude.to_s %>'
+  latitude = '<%= j @property.latitude.to_s %>'
+<% end %>
+
+<br />

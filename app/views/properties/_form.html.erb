@@ -15,19 +15,34 @@
  <div class="form-group">
    <%= f.text_field :address, placeholder: "Address of Property", class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.text_field :units, placeholder: "Number of Units (Studio, 1BR, etc.)", class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.text_field :price, placeholder: "Rent of Apartments", class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.text_area :description, placeholder: "Description:", class: "form-control" %>
   </div>
+
    <div class="field form-group">
-    <%= f.label "Photo" %><br>
-    <%= f.file_field :avatar %>
-  </div>
+    <%= f.label "Entrance" %><br>
+    <%= f.file_field :entrance %>
+  </div> 
+
+<div class="field form-group">
+    <%= f.label "Kitchen" %><br>
+    <%= f.file_field :kitchen %>
+  </div> 
+
+  <div class="field form-group">
+    <%= f.label "Bathroom" %><br>
+    <%= f.file_field :bathroom %>
+  </div> 
+
   <div class="actions">
     <%= f.submit %>
   </div>
