@@ -1,13 +1,13 @@
 <div class="dosis">
 <h1>See Which Apartment is Waiting for You!</h1>
 </div>
-<p>All rental properties are just feet away from beautiful Piedmont Park!</p>
+<p><strong>All of our rental properties are just a feet away from beautiful Piedmont Park. Welcome Home!</strong></p>
 
 <div class="row">
 	<% @properties.each do |rental| %>
 		<div class="col-md-6 center-it">
 			<div class="well center-it">
-				<p><%= image_tag rental.avatar.url(:medium) %></p>
+				<p><%= image_tag rental.entrance.url(:medium) %></p>
 				<h3><%= link_to rental.address, rental %></h3>
 				<p><%= rental.units %></p>
 			</div>
